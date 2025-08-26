@@ -1,4 +1,4 @@
-package com.douglassantana.task_kmp.theme
+package com.douglassantana.task_kmp.designsystem.theme
 
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color

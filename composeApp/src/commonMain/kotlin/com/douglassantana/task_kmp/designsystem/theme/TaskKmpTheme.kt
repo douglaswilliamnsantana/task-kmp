@@ -1,4 +1,4 @@
-package com.douglassantana.task_kmp.theme
+package com.douglassantana.task_kmp.designsystem.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
