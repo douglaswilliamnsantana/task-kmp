@@ -1,16 +1,58 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# 🛠️ Task-KMP
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+![Kotlin](https://img.shields.io/badge/Kotlin-Multiplatform-blueviolet?logo=kotlin)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS-lightgrey)
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+> Projeto base para aplicações multiplataforma usando **Kotlin Multiplatform** e **Jetpack Compose Multiplatform**.
+
+---
+
+## 🚀 Sobre o projeto
+
+**Task-KMP** é um projeto desenvolvido com Kotlin Multiplatform, focado em criar uma base compartilhada para aplicações Android e iOS. Utiliza Jetpack Compose Multiplatform para interface e estrutura modular que separa o código comum (commonMain) do específico para cada plataforma (iosMain, jvmMain).
+
+---
+
+### 🔧 Principais recursos:
+
+    . Compartilhamento de lógica entre Android e iOS
+    . Suporte a SwiftUI no módulo iOS
+    . Estrutura escalável com separação clara entre camadas
+    . Ideal para quem busca aprender ou implementar arquitetura multiplataforma com Kotlin
+
+## 📦 Estrutura do projeto
+
+    task-kmp/ 
+        |── composeApp/ # Código compartilhado entre plataformas |
+        |   └── commonMain/ # Lógica comum (negócio, modelos, etc.) │
+        |   └── iosMain/ # Código específico para iOS
+        |   └── jvmMain/ # Código específico para Android/Desktop
+        |── iosApp/ # Ponto de entrada para o app iOS (SwiftUI)
+        |── gradle/ # Configurações de build
+        |── build.gradle.kts
+        |── settings.gradle.kts
 
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+---
+
+## 📱 Tecnologias utilizadas
+
+- [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html)
+- [Jetpack Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform)
+- [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+- Gradle Kotlin DSL
+
+---
+
+## 🧪 Como executar
+
+### Android
+```bash
+./gradlew :composeApp:androidApp:installDebug
+```
+### iOS
+```bash
+Abra o projeto iosApp no Xcode e execute em um simulador ou dispositivo real.
+```
